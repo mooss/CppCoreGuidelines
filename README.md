@@ -49,3 +49,20 @@ Comments and suggestions for improvements are most welcome. We plan to modify an
 language and the set of available libraries improve. More details are found at [CONTRIBUTING](./CONTRIBUTING.md) and [LICENSE](./LICENSE).
 
 Thanks to [DigitalOcean](https://www.digitalocean.com/?refcode=32f291566cf7&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=CopyPaste) for hosting the Standard C++ Foundation website.
+
+## About this fork
+
+The purpose of this fork is to generate a (subjectively) pretty pdf with syntax highlighting in code examples.
+The generation is made via a `Makefile`.
+
+You can generate the pdf file with:
+
+```sh
+make pdf
+```
+
+### Dependencies
+
+ - make
+ - Perl5
+ - pandoc
