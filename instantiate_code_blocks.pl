@@ -14,11 +14,11 @@ while(my $line = <>){
     }
 
     my $inside_code_block = $indentation >= $current_indentation || $line =~ m/^$/;
+    $line =~ s/^    //;
 
     if($inside_code_block){
         if(@codelines > 0){
             # Code block already started.
-            $line =~ s/^    //;
             push @codelines, $line;
         }
         elsif($indentation < 4){
@@ -28,7 +28,6 @@ while(my $line = <>){
         else{
             # First proper line of code block.
             $current_indentation = $indentation;
-            $line =~ s/^    //;
             push @codelines, $line;
         }
     }
