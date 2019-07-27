@@ -12,6 +12,7 @@ cpp_core_guidelines.pdf: cpp_core_guidelines.md
 		--variable documentclass:report\
 		--variable geometry:margin=2.5cm\
 		--variable papersize:a4paper\
+		--variable toc-title:'Table of contents'\
 		--table-of-content\
 		--variable lang:en
 
