@@ -14,7 +14,11 @@ while(my $line = <>){
     }
 
     my $inside_code_block = $indentation >= $current_indentation || $line =~ m/^$/;
+
+    # Remove one level of indentation.
     $line =~ s/^    //;
+    # Replace html link with pandoc annotation.
+    $line =~ s%<a name="([^"]+)"></a>(.+)%$2 {#$1}%;
 
     if($inside_code_block){
         if(@codelines > 0){
