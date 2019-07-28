@@ -3,8 +3,11 @@ use warnings;
 use v5.14;
 
 # Transform the tab-based code blocks of a markdown file into specific C++ code blocks.
-# Used on CppCoreGuidelines in conjunction with pandoc in order to produce a prettified pdf suiting my taste.
+# Used on CppCoreGuidelines.md in conjunction with pandoc in order to produce a prettyfied pdf suiting my taste.
 
+##################
+# Print document #
+##################
 my @codelines = ();
 my $current_indentation = 0;
 while(my $line = <>){
