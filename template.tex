@@ -105,7 +105,7 @@
             {\color{coloroftitles}#1}
 
 \titlespacing*{\paragraph}
-  {0pt}{3.25ex plus 1ex minus .2ex}{.5ex plus .2ex}
+  {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Various small customisations %
@@ -121,6 +121,14 @@ $if(numbersections)$
 $else$
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 $endif$
+
+% Parskip
+\IfFileExists{parskip.sty}{%
+  \usepackage{parskip}
+}{
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 
 %%%%%%%%%%%%%%%%%%%%%
 % Highlight support %
