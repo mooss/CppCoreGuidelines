@@ -55,7 +55,7 @@ Thanks to [DigitalOcean](https://www.digitalocean.com/?refcode=32f291566cf7&utm_
 The purpose of this fork is to generate a (subjectively) pretty pdf with syntax highlighting in code examples.
 The generation is made via a `Makefile`.
 
-You can generate the pdf file with:
+You can generate `cpp_core_guidelines.pdf` with:
 
 ```sh
 make pdf
@@ -66,3 +66,4 @@ make pdf
  - make
  - Perl5
  - pandoc
+ - a latex distribution (tested with texlive)
